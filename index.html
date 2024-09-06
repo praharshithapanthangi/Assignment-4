@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nameday's Calender</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      
+      <div class="header-con">
+        <div class="header-text">Nameday's Calendar</div>
+        <div class="container">
+          <nav class="header-nav">
+            <a href="#" id="open-login">Login</a>
+            <a href="#" id="open-signup">SignUp</a>
+            <a href="#">DashBoard</a>
+            <a href="#" id="profile-link">Profile</a>
+            <img id="profile-img" src="https://thumbs.dreamstime.com/b/colorful-caricature-half-body-woman-short-wavy-hair-colorful-caricature-half-body-woman-short-wavy-hair-vector-142352396.jpg" height="50px" width="50px" alt="Profile Picture" class="hidden" />
+            <button id="change-image-btn" class="hidden">Change</button>
+
+
+          </nav>
+        </div>
+      </div>
+
+
+          </nav>
+        </div>
+        <div id="login-card" class="card hidden">
+          <h2>Login</h2>
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" required />
+              <span class="error-message" id="login-email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password:</label>
+              <input type="password" id="login-password" required />
+              <span class="error-message" id="login-password-error"></span>
+            </div>
+            <button id="btn" type="submit">Login</button>
+          </form>
+          <p>
+            Don't have an account?
+            <a href="#" id="open-signup-from-login">Sign up</a>
+          </p>
+        </div>
+        <div id="signup-card" class="card hidden">
+          <h2>Sign Up</h2>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="signup-email">Email:</label>
+              <input type="email" id="signup-email" required />
+              <span class="error-message" id="signup-email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-password">Password:</label>
+              <input type="password" id="signup-password" required />
+              <span class="error-message" id="signup-password-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="signup-confirm-password">Confirm Password:</label>
+              <input type="password" id="signup-confirm-password" required />
+              <span
+                class="error-message"
+                id="signup-confirm-password-error"
+              ></span>
+            </div>
+            <button id="btn" type="submit">Sign Up</button>
+          </form>
+          <p>
+            Already have an account? <a href="#" id="back-to-login">Login</a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-1">
+        <div class="con">
+          <h1>Nameday Lookup</h1>
+          <div class="date-picker">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" />
+          </div>
+          <div class="country-picker">
+            <label for="country">Select Country:</label>
+            <select id="country">
+              <option value="us">United States</option>
+              <option value="gr">Greece</option>
+              <option value="it">Italy</option>
+              <option value="se">Sweden</option>
+              <option value="at">Austria</option>
+              <option value="bg">Bulgaria</option>
+              <option value="cz">Czech Republic</option>
+              <option value="de">Germany</option>
+              <option value="dk">Denmark</option>
+              <option value="ee">Estonia</option>
+              <option value="es">Spain</option>
+              <option value="fi">Finland</option>
+              <option value="fr">France</option>
+              <option value="hr">Croatia</option>
+              <option value="hu">Hungary</option>
+              <option value="lt">Lithuania</option>
+              <option value="lv">Latvia</option>
+              <option value="pl">Poland</option>
+              <option value="ru">Russia</option>
+              <option value="sk">Slovakia</option>
+              
+            </select>
+          </div>
+          <button id="fetch-nameday">Get Nameday</button>
+          <div class="nameday-display">
+            <h2>
+              Nameday in <span id="display-country"></span> on
+              <span id="display-date"></span>:
+            </h2>
+            <p id="nameday">
+
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section-2"></section>
+    </main>
+    <footer class="footer">
+      <div class="footer-con">
+
+        <div class="social">
+          <a href="#" style="text-decoration: none"
+            ><i class="bx bxl-facebook"></i
+          ></a>
+          <a href="#" style="text-decoration: none"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="#" style="text-decoration: none"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a href="#" style="text-decoration: none"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+        <div id="clock">Loading...</div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
